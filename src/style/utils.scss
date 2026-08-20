@@ -1,0 +1,894 @@
+/*
+ * @Author: LiLu
+ * @Date: 2024-10-10 09:19:07
+ * @FilePath: /voc-report-nissan-dndc-html/src/style/utils.scss
+ * @Description: 自定义工具样式
+ */
+
+.w-full {
+  width: 100%;
+}
+.w-0 {
+  width: 0;
+}
+
+.h-full {
+  height: 100%;
+}
+
+// 生成4-30不同方向的边距值
+@for $i from -1 through 70 {
+  .ml-#{$i} {
+    margin-left: $i * 1px;
+  }
+
+  .mt-#{$i} {
+    margin-top: $i * 1px;
+  }
+
+  .mr-#{$i} {
+    margin-right: $i * 1px;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $i * 1px;
+  }
+
+  .mx-#{$i} {
+    margin-left: $i * 1px;
+    margin-right: $i * 1px;
+  }
+
+  .my-#{$i} {
+    margin-top: $i * 1px;
+    margin-bottom: $i * 1px;
+  }
+
+  .mxy-#{$i} {
+    margin-left: $i * 1px;
+    margin-right: $i * 1px;
+    margin-top: $i * 1px;
+    margin-bottom: $i * 1px;
+  }
+
+  .pl-#{$i} {
+    padding-left: $i * 1px;
+  }
+
+  .pt-#{$i} {
+    padding-top: $i * 1px;
+  }
+
+  .pr-#{$i} {
+    padding-right: $i * 1px;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $i * 1px;
+  }
+
+  .px-#{$i} {
+    padding-left: $i * 1px;
+    padding-right: $i * 1px;
+  }
+
+  .py-#{$i} {
+    padding-top: $i * 1px;
+    padding-bottom: $i * 1px;
+  }
+
+  .pxy-#{$i} {
+    padding-left: $i * 1px;
+    padding-right: $i * 1px;
+    padding-top: $i * 1px;
+    padding-bottom: $i * 1px;
+  }
+}
+
+// 生成不同字体大小
+@for $i from 8 through 40 {
+  .font-#{$i} {
+    font-size: $i * 1px;
+  }
+}
+
+// 字体粗细
+$--font-weight: 400, 600, 700, 900;
+@each $weight in $--font-weight {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+$--widths: 81;
+@each $width in $--widths {
+  .w-#{$width} {
+    width: $width * 1px;
+  }
+}
+
+// 圆角
+$--border-radius: 0, 2, 4, 8, 11;
+@each $radius in $--border-radius {
+  .radius-#{$radius} {
+    border-radius: $radius * 1px;
+  }
+}
+
+// 行高
+@for $height from 12 through 60 {
+  .lh-#{$height} {
+    line-height: $height * 1px;
+  }
+}
+
+// 弹性盒子及对齐
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-1-0-auto {
+  flex: 1 0 auto;
+}
+.flex-inline {
+  display: inline-flex;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+// x轴两头对齐
+.flex-justify-between {
+  @extend.flex;
+  @extend.justify-between;
+}
+// 横轴变竖轴
+.flex-direction-column {
+  @extend.flex;
+  @extend.direction-column;
+}
+// y轴居中
+.flex-align-center {
+  @extend.flex;
+  @extend.align-center;
+}
+// x轴居中
+.flex-justify-center {
+  @extend.flex;
+  @extend.justify-center;
+}
+.flex-justify-end {
+  @extend.flex;
+  @extend.justify-end;
+}
+// xy轴居中
+.flex-xy-center {
+  @extend.flex;
+  @extend.align-center;
+  @extend.justify-center;
+}
+
+// y轴居中 x轴居右
+.flex-x-end-y-center {
+  @extend.flex;
+  @extend.align-center;
+  @extend.justify-end;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.color-6e7b91 {
+  color: $--color-6e7b91;
+}
+
+.color-000 {
+  color: $--color-000;
+}
+.color-333 {
+  color: $--color-333;
+}
+.color-666 {
+  color: $--color-666;
+}
+.color-999 {
+  color: $--color-999;
+}
+
+.color-999-important {
+  color: $--color-999 !important;
+}
+
+.color-009949 {
+  color: $--color-009949;
+}
+.color-6b6d75 {
+  color: $--color-6b6d75;
+}
+.color-d92d3c {
+  color: $--color-d92d3c;
+}
+
+.color-09121f {
+  color: $--color-09121f;
+}
+
+.color-26292e {
+  color: $--color-26292e;
+}
+.color-dd3e3e {
+  color: $--color-dd3e3e;
+}
+.color-05a4b3 {
+  color: $--color-05a4b3;
+}
+.color-29b9c2 {
+  color: $--color-29b9c2;
+}
+.color-3382cb {
+  color: $--color-3382cb;
+}
+.color-ff7b2f {
+  color: $--color-ff7b2f;
+}
+.color-ffb53a {
+  color: $--color-ffb53a;
+}
+.color-4b5468 {
+  color: $--color-4b5468;
+}
+.color-27c29f {
+  color: $--color-27c29f;
+}
+
+.color-2c9bde {
+  color: $--color-2c9bde;
+}
+
+.color-131b2a {
+  color: $--color-131b2a;
+}
+.color-19c9d4 {
+  color: $--color-19c9d4;
+}
+.color-2bb8c2 {
+  color: $--color-2bb8c2;
+}
+.color-fff {
+  color: $--color-fff;
+}
+.color-0082d6 {
+  color: $--color-0082d6;
+}
+.color-c6c8cd {
+  color: $--color-c6c8cd;
+}
+
+.color-001e50 {
+  color: $--color-001e50;
+}
+.color-dd3e3e {
+  color: $--color-dd3e3e;
+}
+.color-2c9bde {
+  color: $--color-2c9bde;
+}
+.color-555 {
+  color: $--color-555;
+}
+
+.color-000-07 {
+  color: rgba($color: #000000, $alpha: 0.7);
+}
+.color-000-08 {
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.border-bottom-f1f2fc {
+  border-bottom: $--border-f1f2fc;
+}
+
+.border-def {
+  border: 1px solid $--color-dde3ee;
+}
+.border-1168ca-01 {
+  border: 1px solid rgba($--color-1168ca, 0.1);
+}
+
+.border-bottom-def {
+  border-bottom: 1px solid $--color-dde3ee;
+}
+.border-left-def {
+  border-left: 1px solid $--color-dde3ee;
+}
+.border-right-def {
+  border-right: 1px solid $--color-dde3ee;
+}
+.border-dde3ee {
+  border: 1px solid $--color-dde3ee;
+}
+.border-bottom-f6f6f6 {
+  border-bottom: 1px solid $--color-f6f6f6;
+}
+
+.border-bottom-26292e-015 {
+  border-bottom: 1px solid rgba($--color-26292e, 0.15);
+}
+.border-right-f6f6f6 {
+  border-right: 1px solid $--color-f6f6f6;
+}
+.border-3-7fccff {
+  border: 3px solid $--color-7fccff;
+}
+
+.border-3-19c9d4 {
+  border: 3px solid $--color-19c9d4;
+}
+
+.border-3-27c29f {
+  border: 3px solid $--color-27c29f;
+}
+
+.border-3-29b9c2 {
+  border: 3px solid $--color-29b9c2;
+}
+
+.border-3-2c9bde {
+  border: 3px solid $--color-2c9bde;
+}
+
+.border-1-2c9bde {
+  border: 1px solid $--color-2c9bde;
+}
+
+.border-3-ff7b2f {
+  border: 3px solid $--color-ff7b2f;
+}
+
+.border-3-transparent {
+  border: 3px solid transparent;
+}
+.border-3-bfc9dd {
+  border: 3px solid $--color-bfc9dd;
+}
+
+.border-left-009949 {
+  border-left: 2px solid $--color-009949;
+}
+.border-left-27c29f {
+  border-left: 2px solid $--color-27c29f;
+}
+
+.border-left-05a4b3 {
+  border-left: 2px solid $--color-05a4b3;
+}
+.border-left-29b9c2 {
+  border-left: 2px solid $--color-29b9c2;
+}
+
+.border-left-2c9bde {
+  border-left: 2px solid $--color-2c9bde;
+}
+
+.border-left-ff7b2f {
+  border-left: 2px solid $--color-ff7b2f;
+}
+
+.border-radius4400 {
+  border-radius: 4px 4px 0 0;
+}
+.block-1616 {
+  width: 16px;
+  height: 16px;
+}
+
+//背景及颜色
+.white {
+  background-color: $--color-fff;
+}
+
+.bgc-def {
+  background-color: $--color-f0f3fa;
+}
+
+//阴影
+.shadow {
+  box-shadow: 0 2px 6px 0 $--color-shadow;
+}
+.shadow-6656563f {
+  box-shadow: inset 0px 0px 4px 1px rgba(102, 86, 86, 0.025);
+}
+
+//悬浮加阴影
+.shadow-hover {
+  transition: 0.3s linear;
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 6px 16px 0 $--color-shadow;
+}
+
+.bg-white {
+  background-color: $--color-fff;
+}
+.bg-c8e2fa {
+  background-color: $--color-c8e2fa;
+}
+
+.bg-c8e2fa {
+  background-color: $--color-ddf2fc;
+}
+.bg-55aee5 {
+  background-color: $--color-55aee5;
+}
+.bg-25c1c8 {
+  background-color: $--color-25c1c8;
+}
+.bg-79d089 {
+  background-color: $--color-79d089;
+}
+
+.bg-bfc9dd {
+  background-color: $--color-bfc9dd;
+}
+
+.bg-bfc9dd-01 {
+  // background-color: $--color-bfc9dd;
+  background-color: rgba($--color-bfc9dd, 0.1);
+}
+.bg-bfc9dd-02 {
+  // background-color: $--color-bfc9dd;
+  background-color: rgba($--color-bfc9dd, 0.2);
+}
+
+.bg-ff7e2f {
+  background-color: $--color-ff7e2f;
+}
+.bg-ff7e2f-01 {
+  background-color: rgba($--color-ff7e2f, 0.1);
+}
+
+.bg-27c29f {
+  // background-color: $--color-27c29f;
+  background-color: rgba($--color-27c29f, 0.1);
+}
+
+.bg-009949 {
+  background-color: rgba($--color-009949, 0.1);
+}
+.bg-05a4b3 {
+  background-color: rgba($--color-05a4b3, 0.1);
+}
+.bg-29b9c2 {
+  // background-color: rgba($--color-29b9c2, 0.1);
+  background-color: rgba($--color-29b9c2, 0.1);
+}
+.bg-2c9bde {
+  background-color: rgba($--color-2c9bde, 0.1);
+}
+.bg-ff7b2f {
+  background-color: rgba($--color-ff7b2f, 0.1);
+}
+
+.bg-27c29f-02 {
+  background-color: rgba($--color-27c29f, 0.2);
+}
+.bg-29b9c2-02 {
+  background-color: rgba($--color-29b9c2, 0.2);
+}
+.bg-2c9bde-02 {
+  background-color: rgba($--color-2c9bde, 0.2);
+}
+.bg-ff7b2f-02 {
+  background-color: rgba($--color-ff7b2f, 0.2);
+}
+
+.bg-ff7b2f-1 {
+  background-color: rgba($--color-ff7b2f, 1);
+}
+.bg-2c9bde-1 {
+  background-color: rgba($--color-2c9bde, 1);
+}
+.bg-29b9c2-1 {
+  background-color: rgba($--color-29b9c2, 1);
+}
+.bg-27c29f-1 {
+  background-color: rgba($--color-27c29f, 1);
+}
+
+.bg-c8e2fa-01 {
+  background: rgba($color: $--color-c8e2fa, $alpha: 0.1);
+}
+.bg-fbfbfd-07 {
+  background: rgba($color: $--color-fbfbfd, $alpha: 0.7);
+}
+
+.bg-fff-065 {
+  background: rgba($color: $--color-fff, $alpha: 0.65);
+}
+
+.bgc-e6f8f5-fff {
+  background: linear-gradient(90deg, $--color-e6f8f5 0%, $--color-fff 100%);
+}
+
+.bgc-fff-e5f1ff {
+  background: linear-gradient(270deg, $--color-fff 0%, $--color-e5f1ff 100%);
+}
+.bgc-f9f9f9 {
+  background-color: $--color-f9f9f9;
+}
+.bg-ddf2fc-04 {
+  background-color: rgba($--color-ddf2fc, 0.4);
+}
+
+.bg-1da6ed-015 {
+  background-color: rgba($--color-1da6ed, 0.15);
+}
+
+.bg-287bc8-015 {
+  background-color: rgba($--color-287bc8, 0.15);
+}
+
+.bg-5ac25d-015 {
+  background-color: rgba($--color-5ac25d, 0.15);
+}
+
+.bg-dc6f00-015 {
+  background-color: rgba($--color-dc6f00, 0.15);
+}
+.bg-e78fa1-015 {
+  background-color: rgba($--color-e78fa1, 0.15);
+}
+
+.bg-b9d7ef-02 {
+  background-color: rgba($--color-b9d7ef, 0.2);
+}
+
+.bg-c7ebd1-02 {
+  background-color: rgba($--color-c7ebd1, 0.2);
+}
+
+.bg-b6e2f9-02 {
+  background-color: rgba($--color-b6e2f9, 0.2);
+}
+
+.bg-ebd3b8-02 {
+  background-color: rgba($--color-ebd3b8, 0.2);
+}
+
+.bg-b4bfcc-01 {
+  background-color: rgba($--color-b4bfcc, 0.1);
+}
+
+.bg-b4bfcc-1 {
+  background-color: rgba($--color-b4bfcc, 1);
+}
+.bg-fbeef1-1 {
+  background-color: rgba($--color-fbeef1, 1) !important;
+}
+.bg-e7f5fb-1 {
+  background-color: rgba($--color-e7f5fb, 1) !important;
+}
+
+.point {
+  cursor: pointer;
+}
+
+.full-content {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+// 单行文本省略号
+.ellipsis-single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 多行文本省略号
+.ellipsis-multi-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 显示的行数 */
+  line-clamp: 2; /* 标准属性 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// 自定义按钮
+.c-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #dde3ee;
+  font-size: 14px;
+  color: #4e5969;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &.tap {
+    background: #148ef4;
+    color: #ffffff;
+  }
+  .cb-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+
+.risk-level-s {
+  width: 20px;
+  height: 20px;
+  background: #dd3e3e;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 20px;
+  text-align: center;
+}
+
+.opacity-03 {
+  opacity: 0.3;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.base-card {
+  @extend.radius-8;
+  @extend.bg-white;
+}
+
+@mixin risk-level($bgc) {
+  padding: 2px 5px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 20px;
+  text-align: center;
+  background: $bgc;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.color-risk-1 {
+  color: $--color-dd3e3e;
+}
+
+.color-risk-2 {
+  color: $--color-ff7b2f;
+}
+.color-risk-3 {
+  // color: $--color-e9c732;
+  color: $--color-ffb53a;
+}
+
+.bg-risk-1 {
+  background-color: $--color-dd3e3e;
+}
+
+.bg-risk-1-01 {
+  background-color: rgba($--color-dd3e3e, 0.1);
+}
+
+.bg-risk-2 {
+  background-color: $--color-ff7b2f;
+}
+
+.bg-risk-2-01 {
+  background-color: rgba($--color-ff7b2f, 0.1);
+}
+
+.bg-risk-3 {
+  // background-color: $--color-e9c732;
+  background-color: $--color-ffb53a;
+}
+
+.bg-e9c732 {
+  background-color: $--color-e9c732;
+}
+.bg-e9c732-01 {
+  background-color: rgba($--color-e9c732, 0.1);
+}
+
+.risk-level-1 {
+  @include risk-level($--color-dd3e3e);
+}
+
+.risk-level-2 {
+  @include risk-level($--color-ff7b2f);
+}
+
+.risk-level-3 {
+  @include risk-level($--color-e9c732);
+}
+
+.emotion-status-wrapper {
+  height: 124px;
+  background: rgba($color: #c8e2fa, $alpha: 0.1);
+  box-shadow: inset 0px 0px 4px 1px rgba(102, 86, 86, 0.025);
+  border-radius: 11px 11px 11px 11px;
+  display: flex;
+  align-items: center;
+}
+
+.line-dashed-d9d9d9-1 {
+  width: 36px;
+  height: 1px;
+  border-bottom: 1px dashed $--color-d9d9d9;
+  margin: 0 8px;
+}
+
+.line-solid-dde3ee-1 {
+  // width: 80px;
+  width: 65px;
+  height: 1px;
+  border-bottom: 1px solid $--color-dde3ee;
+}
+.line-26292e {
+  height: 1px;
+  background: rgba(#26292e, 0.15);
+  margin: 12px -24px 23px;
+}
+
+.ml-item-6 {
+  & + .ml-item-6 {
+    margin-left: 6px;
+  }
+}
+
+.ml-item-16 {
+  & + .ml-item-16 {
+    margin-left: 16px;
+  }
+}
+
+.ml-item-22 {
+  & + .ml-item-22 {
+    margin-left: 22px;
+  }
+}
+
+.icon-pie {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  // border-color: #55aee5;
+}
+.icon-bar {
+  width: 14px;
+  height: 14px;
+  background: #55aee5;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.line-wrapper {
+  position: absolute;
+  height: 52px;
+  width: 100%;
+  top: -7px;
+  left: -4px;
+  .line-1,
+  .line-2 {
+    width: 2px;
+    height: 60%;
+    border-left: 2px dashed rgba(#000, 0.15);
+    position: absolute;
+    left: -1px;
+  }
+  .line-1 {
+    top: -5px;
+  }
+  .line-2 {
+    // top: 50%;
+    top: 60%;
+  }
+  .circle-1 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #dde3ee;
+    position: absolute;
+    // top: 19px;
+    top: 60%;
+    left: -4px;
+    transform: translateY(-50%);
+    &.tap {
+      background-color: #2c9bde;
+    }
+  }
+}
+
+.line-3 {
+  width: 2px;
+  height: 14px;
+  background: #dde3ee;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+.bgc-f0f3fa-h-20-w-full {
+  background-color: $--color-f0f3fa;
+  height: 20px;
+  width: 100%;
+}
+
+.border-radius-0088 {
+  border-radius: 0 0 8px 8px;
+}
+.border-radius-8800 {
+  border-radius: 8px 8px 0 0;
+}

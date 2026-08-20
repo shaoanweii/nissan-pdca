@@ -1,0 +1,110 @@
+/*
+ * @Author: LiLu
+ * @Date: 2024-10-10 09:27:43
+ * @FilePath: /voc-report-nissan-dndc-html/src/style/arco-reset.scss
+ * @Description: 重置acro-design样式
+ */
+
+.arco-drawer-header .arco-drawer-title {
+  font-weight: 600 !important;
+}
+
+.arco-virtual-list {
+  .arco-cascader-option,
+  .arco-cascader-search-option {
+    padding-left: 7px !important;
+  }
+}
+
+.arco-drawer-footer {
+  box-shadow: 0px -3px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.arco-table .arco-table-th {
+  background: #f0f3fa;
+}
+.arco-spin-mask {
+  z-index: 9999;
+}
+// 全局loading样式
+.global-loading {
+  .arco-spin-mask {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+.fCascader {
+  margin-right: 30px;
+}
+
+.virtualList-wrapper {
+  .arco-virtual-list {
+    .arco-list-item {
+      padding: 0 !important;
+    }
+  }
+}
+
+.arco-picker-week-list {
+  font-size: 14px;
+}
+
+// .arco-trigger-content {
+//   margin-right: 30px !important;
+// }
+
+// --------------------------以下为基于命名空间修改acro-design样式-------------------------
+
+.clear-form-item-margin {
+  .arco-form-item-layout-inline {
+    margin-right: 0 !important;
+  }
+
+  .arco-form-item {
+    margin-bottom: 0 !important;
+  }
+}
+
+// a-tooltip提示组件 content-class
+.tooltipClass {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tooltipContent {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
+.tooltipArrow {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.custom-timeline {
+  .arco-timeline-item {
+    min-height: 54px;
+  }
+  .arco-timeline-item-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .arco-timeline-item-dot-wrapper .arco-timeline-item-dot-content {
+    width: 8px;
+  }
+}
+
+.acro-btn-def {
+  background-color: #2c9bde !important;
+  border-radius: 4px 4px 4px 4px !important;
+}
+
+.acro-btn-def-plain {
+  background: #fff !important;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid #dde3ee !important;
+}
+
+.risk-title-tip {
+  width: 730px;
+  padding: 8px 12px;
+  background-color: #000;
+}

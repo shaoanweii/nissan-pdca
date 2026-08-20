@@ -1,0 +1,234 @@
+/*
+ * @Author: LiLu
+ * @Date: 2024-09-24 09:45:11
+ * @FilePath: /voc-report-nissan-dndc-html/src/style/normalize.scss
+ * @Description: 重置浏览器样式
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  overflow: hidden;
+  background-color: $--color-f0f3fa;
+  min-width: 1280px;
+  // min-width: 1780px;
+  overflow-x: auto;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-size: 100%; */
+  font-weight: normal;
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  background-color: #fff;
+  border: none;
+}
+
+code,
+kbd,
+samp,
+tt {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #1c1c1e;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+// input,
+// button,
+// textarea {
+//     *font-size: 100%;
+// }
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+sup,
+sub {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* remember to highlight anchors and inserts somehow! */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**Common Css**/
+.fr {
+  float: right;
+  // *display: inline;
+}
+
+.fl {
+  float: left;
+  // *display: inline;
+}
+
+/*文本超出显示省略号*/
+.ehn,
+.otw,
+.tow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*清除浮动*/
+.clearfix {
+  clear: both;
+  // *zoom: 1;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '\0020';
+  visibility: hidden;
+  height: 0;
+}
+
+::-webkit-scrollbar-track-piece {
+  /*background-color: rgba(28, 36, 56, 0.7);*/
+  width: 8px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border-style: dashed;
+  background-color: rgba(157, 165, 183, 0.4);
+  border-color: transparent;
+  border-width: 2px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(157, 165, 183, 0.5);
+}
