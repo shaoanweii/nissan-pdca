@@ -110,6 +110,10 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
+    // 独立固定端口，避免与其他项目（AGAI 等）抢占 5173 导致访问到错误应用
+    port: 5188,
+    // 端口被占用时直接报错，避免 Vite 静默换端口而连错项目
+    strictPort: true,
     proxy: {
       '^/api': {
         // target: 'http://172.16.80.16:30705/', //dev
